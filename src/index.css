@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	margin: 0;
+	font-family: "Plus Jakarta Sans";
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	overflow-x: hidden;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+/* Firefox */
+input[type="number"] {
+	-moz-appearance: textfield;
+}
+
+input[type=checkbox]:checked {
+	background-color: #111 !important;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
+}
+
+/* custom fonts */
+@font-face {
+	font-family: "pecita";
+	src: url("./assets/fonts/pecita.book.otf") format("truetype");
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500&display=swap");
+
+/* hide scroll bar */
+/* ::-webkit-scrollbar {
+  display: none;
+} */
+
+@media (max-width: 600px) {
+	.mobileView {
+		display: none;
+	}
+}
+
+.edits:hover {
+	color: red;
+}
+
+.css-1okebmr-indicatorSeparator {
+	display: none !important;
+}
+
+.dashboard .apexcharts-legend {
+	position: absolute !important;
+	bottom: 0 !important;
+	left: 0 !important;
+}
+
+.dashboard .apexcharts8h5f4mefj {
+	width: 60% !important;
+	height: 100% !important;
+	margin: auto !important;
+}
+
+@media screen and (max-width:550px) {
+	.MuiBox-root {
+		width: 90% !important;
+	}
+}
+
+
+#icon_container svg {
+	width: 200px !important;
+	height: auto !important;
+}
+
+
+.rti--container {
+	color: #4f46e5;
+
+
+
+
+}
+
+.pagination {
+	padding-bottom: 16px;
+	padding-top: 32px;
+	border-top: 0;
+}
+
+.pagination li {
+	width: 32px;
+	height: 32px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgba(0, 0, 0, 0.25);
+	border-radius: 6px;
+	user-select: none;
+}
+
+.pagination .active,
+.pagination li:hover {
+	background: rgba(0, 0, 0, 1);
+	color: white;
+}

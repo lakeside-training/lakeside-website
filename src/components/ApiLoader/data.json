@@ -1,0 +1,1553 @@
+{
+  "v": "4.8.0",
+  "meta": {
+    "g": "LottieFiles AE 3.1.1",
+    "a": "Vanny",
+    "k": "",
+    "d": "Lakeside Logo Loader",
+    "tc": ""
+  },
+  "fr": 30,
+  "ip": 0,
+  "op": 180,
+  "w": 500,
+  "h": 500,
+  "nm": "Lakeside_Logo 2",
+  "ddd": 1,
+  "assets": [
+    {
+      "id": "image_0",
+      "w": 115,
+      "h": 183,
+      "u": "",
+      "p": "data:image/png;base64,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",
+      "e": 1
+    },
+    {
+      "id": "image_1",
+      "w": 115,
+      "h": 183,
+      "u": "",
+      "p": "data:image/png;base64,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",
+      "e": 1
+    },
+    {
+      "id": "image_2",
+      "w": 57,
+      "h": 260,
+      "u": "",
+      "p": "data:image/png;base64,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",
+      "e": 1
+    },
+    {
+      "id": "comp_0",
+      "layers": [
+        {
+          "ddd": 1,
+          "ind": 1,
+          "ty": 0,
+          "nm": "Points",
+          "refId": "comp_1",
+          "sr": 1,
+          "ks": {
+            "o": { "a": 0, "k": 100 },
+            "rx": { "a": 0, "k": 0 },
+            "ry": {
+              "a": 1,
+              "k": [
+                {
+                  "i": { "x": [0.833], "y": [0.833] },
+                  "o": { "x": [0.167], "y": [0.167] },
+                  "t": 0,
+                  "s": [0]
+                },
+                {
+                  "i": { "x": [0.833], "y": [0.833] },
+                  "o": { "x": [0.167], "y": [0.167] },
+                  "t": 40,
+                  "s": [182]
+                },
+                {
+                  "i": { "x": [0.833], "y": [0.833] },
+                  "o": { "x": [0.167], "y": [0.167] },
+                  "t": 95,
+                  "s": [182]
+                },
+                { "t": 137, "s": [2] }
+              ]
+            },
+            "rz": { "a": 0, "k": 0 },
+            "or": { "a": 0, "k": [0, 0, 0] },
+            "p": { "a": 0, "k": [250, 250, 0] },
+            "a": { "a": 0, "k": [250, 250, 0] },
+            "s": { "a": 0, "k": [100, 100, 100] }
+          },
+          "ao": 0,
+          "w": 500,
+          "h": 500,
+          "ip": 0,
+          "op": 180,
+          "st": 0,
+          "bm": 0
+        },
+        {
+          "ddd": 0,
+          "ind": 2,
+          "ty": 0,
+          "nm": "Slash",
+          "refId": "comp_4",
+          "sr": 1,
+          "ks": {
+            "o": { "a": 0, "k": 100 },
+            "r": { "a": 0, "k": 0 },
+            "p": { "a": 0, "k": [250, 250, 0] },
+            "a": { "a": 0, "k": [250, 250, 0] },
+            "s": { "a": 0, "k": [100, 100, 100] }
+          },
+          "ao": 0,
+          "w": 500,
+          "h": 500,
+          "ip": 0,
+          "op": 180,
+          "st": 0,
+          "bm": 0
+        }
+      ]
+    },
+    {
+      "id": "comp_1",
+      "layers": [
+        {
+          "ddd": 0,
+          "ind": 1,
+          "ty": 0,
+          "nm": "Right",
+          "refId": "comp_2",
+          "sr": 1,
+          "ks": {
+            "o": { "a": 0, "k": 100 },
+            "r": { "a": 0, "k": 0 },
+            "p": {
+              "a": 1,
+              "k": [
+                {
+                  "i": { "x": 0.833, "y": 0.833 },
+                  "o": { "x": 0.167, "y": 0.167 },
+                  "t": 0,
+                  "s": [250, 250, 0],
+                  "to": [8, 0, 0],
+                  "ti": [0, 0, 0]
+                },
+                {
+                  "i": { "x": 0.833, "y": 0.833 },
+                  "o": { "x": 0.167, "y": 0.167 },
+                  "t": 23,
+                  "s": [298, 250, 0],
+                  "to": [0, 0, 0],
+                  "ti": [0, 0, 0]
+                },
+                {
+                  "i": { "x": 0.833, "y": 0.833 },
+                  "o": { "x": 0.167, "y": 0.167 },
+                  "t": 48,
+                  "s": [250, 250, 0],
+                  "to": [0, 0, 0],
+                  "ti": [0, 0, 0]
+                },
+                {
+                  "i": { "x": 0.833, "y": 0.833 },
+                  "o": { "x": 0.167, "y": 0.167 },
+                  "t": 68,
+                  "s": [298, 250, 0],
+                  "to": [0, 0, 0],
+                  "ti": [8, 0, 0]
+                },
+                {
+                  "i": { "x": 0.833, "y": 0.833 },
+                  "o": { "x": 0.167, "y": 0.167 },
+                  "t": 90,
+                  "s": [250, 250, 0],
+                  "to": [0, 0, 0],
+                  "ti": [0, 0, 0]
+                },
+                {
+                  "i": { "x": 0.833, "y": 0.833 },
+                  "o": { "x": 0.167, "y": 0.167 },
+                  "t": 145,
+                  "s": [250, 250, 0],
+                  "to": [8, 0, 0],
+                  "ti": [0, 0, 0]
+                },
+                {
+                  "i": { "x": 0.833, "y": 0.833 },
+                  "o": { "x": 0.167, "y": 0.167 },
+                  "t": 163,
+                  "s": [298, 250, 0],
+                  "to": [0, 0, 0],
+                  "ti": [8, 0, 0]
+                },
+                { "t": 179, "s": [250, 250, 0] }
+              ]
+            },
+            "a": { "a": 0, "k": [250, 250, 0] },
+            "s": { "a": 0, "k": [100, 100, 100] }
+          },
+          "ao": 0,
+          "w": 500,
+          "h": 500,
+          "ip": 0,
+          "op": 180,
+          "st": 0,
+          "bm": 0
+        },
+        {
+          "ddd": 0,
+          "ind": 2,
+          "ty": 0,
+          "nm": "Left",
+          "refId": "comp_3",
+          "sr": 1,
+          "ks": {
+            "o": { "a": 0, "k": 100 },
+            "r": { "a": 0, "k": 0 },
+            "p": {
+              "a": 1,
+              "k": [
+                {
+                  "i": { "x": 0.833, "y": 0.833 },
+                  "o": { "x": 0.167, "y": 0.167 },
+                  "t": 0,
+                  "s": [250, 250, 0],
+                  "to": [-8.167, 0, 0],
+                  "ti": [0, 0, 0]
+                },
+                {
+                  "i": { "x": 0.833, "y": 0.833 },
+                  "o": { "x": 0.167, "y": 0.167 },
+                  "t": 23,
+                  "s": [201, 250, 0],
+                  "to": [0, 0, 0],
+                  "ti": [0, 0, 0]
+                },
+                {
+                  "i": { "x": 0.833, "y": 0.833 },
+                  "o": { "x": 0.167, "y": 0.167 },
+                  "t": 48,
+                  "s": [250, 250, 0],
+                  "to": [0, 0, 0],
+                  "ti": [0, 0, 0]
+                },
+                {
+                  "i": { "x": 0.833, "y": 0.833 },
+                  "o": { "x": 0.167, "y": 0.167 },
+                  "t": 68,
+                  "s": [201, 250, 0],
+                  "to": [0, 0, 0],
+                  "ti": [-8.167, 0, 0]
+                },
+                {
+                  "i": { "x": 0.833, "y": 0.833 },
+                  "o": { "x": 0.167, "y": 0.167 },
+                  "t": 90,
+                  "s": [250, 250, 0],
+                  "to": [0, 0, 0],
+                  "ti": [0, 0, 0]
+                },
+                {
+                  "i": { "x": 0.833, "y": 0.833 },
+                  "o": { "x": 0.167, "y": 0.167 },
+                  "t": 145,
+                  "s": [250, 250, 0],
+                  "to": [-8.167, 0, 0],
+                  "ti": [0, 0, 0]
+                },
+                {
+                  "i": { "x": 0.833, "y": 0.833 },
+                  "o": { "x": 0.167, "y": 0.167 },
+                  "t": 163,
+                  "s": [201, 250, 0],
+                  "to": [0, 0, 0],
+                  "ti": [-8.167, 0, 0]
+                },
+                { "t": 179, "s": [250, 250, 0] }
+              ]
+            },
+            "a": { "a": 0, "k": [250, 250, 0] },
+            "s": { "a": 0, "k": [100, 100, 100] }
+          },
+          "ao": 0,
+          "w": 500,
+          "h": 500,
+          "ip": 0,
+          "op": 180,
+          "st": 0,
+          "bm": 0
+        }
+      ]
+    },
+    {
+      "id": "comp_2",
+      "layers": [
+        {
+          "ddd": 0,
+          "ind": 2,
+          "ty": 2,
+          "nm": "Grey 2",
+          "td": 1,
+          "refId": "image_0",
+          "sr": 1,
+          "ks": {
+            "o": { "a": 0, "k": 100 },
+            "r": { "a": 0, "k": 0 },
+            "p": { "a": 0, "k": [360, 249.5, 0] },
+            "a": { "a": 0, "k": [57.5, 91.5, 0] },
+            "s": { "a": 0, "k": [100, 100, 100] }
+          },
+          "ao": 0,
+          "ip": -3,
+          "op": 180,
+          "st": -3,
+          "bm": 0
+        },
+        {
+          "ddd": 0,
+          "ind": 3,
+          "ty": 4,
+          "nm": "Shape Layer 1",
+          "tt": 1,
+          "sr": 1,
+          "ks": {
+            "o": { "a": 0, "k": 100 },
+            "r": { "a": 0, "k": 0 },
+            "p": {
+              "a": 1,
+              "k": [
+                {
+                  "i": { "x": 0.833, "y": 0.833 },
+                  "o": { "x": 0.167, "y": 0.167 },
+                  "t": -3,
+                  "s": [376.892, 397.634, 0],
+                  "to": [-2.054, -1.528, 0],
+                  "ti": [0.152, 28.059, 0]
+                },
+                {
+                  "i": { "x": 0.833, "y": 0.833 },
+                  "o": { "x": 0.167, "y": 0.167 },
+                  "t": 8,
+                  "s": [401.856, 379.523, 0],
+                  "to": [-0.096, -17.76, 0],
+                  "ti": [2.652, 20.89, 0]
+                },
+                {
+                  "i": { "x": 0.833, "y": 0.833 },
+                  "o": { "x": 0.167, "y": 0.167 },
+                  "t": 53,
+                  "s": [359.259, 320.095, 0],
+                  "to": [-2.818, -22.196, 0],
+                  "ti": [-3.575, 18.963, 0]
+                },
+                {
+                  "i": { "x": 0.833, "y": 0.833 },
+                  "o": { "x": 0.167, "y": 0.167 },
+                  "t": 71,
+                  "s": [420.091, 256.615, 0],
+                  "to": [5.576, -29.577, 0],
+                  "ti": [0, 0, 0]
+                },
+                {
+                  "i": { "x": 0.833, "y": 0.833 },
+                  "o": { "x": 0.167, "y": 0.167 },
+                  "t": 87,
+                  "s": [376.892, 205.634, 0],
+                  "to": [0, 0, 0],
+                  "ti": [0, 0, 0]
+                },
+                {
+                  "i": { "x": 0.833, "y": 0.833 },
+                  "o": { "x": 0.167, "y": 0.167 },
+                  "t": 105,
+                  "s": [376.892, 205.634, 0],
+                  "to": [0, 0, 0],
+                  "ti": [0, 0, 0]
+                },
+                { "t": 179, "s": [376.892, 400.634, 0] }
+              ]
+            },
+            "a": { "a": 0, "k": [0, 0, 0] },
+            "s": { "a": 0, "k": [100, 100, 100] }
+          },
+          "ao": 0,
+          "hasMask": true,
+          "masksProperties": [
+            {
+              "inv": false,
+              "mode": "a",
+              "pt": {
+                "a": 0,
+                "k": {
+                  "i": [
+                    [11.024, -1.866],
+                    [9, -1],
+                    [15.5, 2],
+                    [16, 0.5],
+                    [0, 0],
+                    [-2.5, 0],
+                    [-13.5, 1.5],
+                    [-11, 3],
+                    [-11, -7.5],
+                    [-10.5, 5.5],
+                    [0, 0],
+                    [0, 0]
+                  ],
+                  "o": [
+                    [-32.5, 5.5],
+                    [-9, 1],
+                    [-15.5, -2],
+                    [-16, -0.5],
+                    [0, 0],
+                    [2.5, 0],
+                    [13.5, -1.5],
+                    [11, -3],
+                    [11, 7.5],
+                    [10.5, -5.5],
+                    [0, 0],
+                    [0, 0]
+                  ],
+                  "v": [
+                    [28.5, -56.185],
+                    [-15.5, -40.185],
+                    [-64.5, -50.685],
+                    [-104, -40.185],
+                    [-124.5, -50.185],
+                    [-117, 136.315],
+                    [-78.5, 150.315],
+                    [-50, 129.315],
+                    [-10.5, 151.815],
+                    [19, 134.815],
+                    [57, 145.315],
+                    [56, -42.685]
+                  ],
+                  "c": true
+                }
+              },
+              "o": { "a": 0, "k": 100 },
+              "x": { "a": 0, "k": 0 },
+              "nm": "Mask 1"
+            }
+          ],
+          "ef": [
+            {
+              "ty": 5,
+              "nm": "Gradient Ramp",
+              "np": 10,
+              "mn": "ADBE Ramp",
+              "ix": 1,
+              "en": 1,
+              "ef": [
+                {
+                  "ty": 3,
+                  "nm": "Start of Ramp",
+                  "mn": "ADBE Ramp-0001",
+                  "ix": 1,
+                  "v": { "a": 0, "k": [209, 110] }
+                },
+                {
+                  "ty": 2,
+                  "nm": "Start Color",
+                  "mn": "ADBE Ramp-0002",
+                  "ix": 2,
+                  "v": { "a": 0, "k": [0.588235318661, 0.06274510175, 1, 1] }
+                },
+                {
+                  "ty": 3,
+                  "nm": "End of Ramp",
+                  "mn": "ADBE Ramp-0003",
+                  "ix": 3,
+                  "v": { "a": 0, "k": [225, 389] }
+                },
+                {
+                  "ty": 2,
+                  "nm": "End Color",
+                  "mn": "ADBE Ramp-0004",
+                  "ix": 4,
+                  "v": {
+                    "a": 0,
+                    "k": [0.258823543787, 0.521568655968, 0.956862747669, 1]
+                  }
+                },
+                {
+                  "ty": 7,
+                  "nm": "Ramp Shape",
+                  "mn": "ADBE Ramp-0005",
+                  "ix": 5,
+                  "v": { "a": 0, "k": 1 }
+                },
+                {
+                  "ty": 0,
+                  "nm": "Ramp Scatter",
+                  "mn": "ADBE Ramp-0006",
+                  "ix": 6,
+                  "v": { "a": 0, "k": 0 }
+                },
+                {
+                  "ty": 0,
+                  "nm": "Blend With Original",
+                  "mn": "ADBE Ramp-0007",
+                  "ix": 7,
+                  "v": { "a": 0, "k": 0 }
+                },
+                { "ty": 6, "nm": "", "mn": "ADBE Ramp-0008", "ix": 8, "v": 0 }
+              ]
+            },
+            {
+              "ty": 5,
+              "nm": "Wave Warp",
+              "np": 10,
+              "mn": "ADBE Wave Warp",
+              "ix": 2,
+              "en": 1,
+              "ef": [
+                {
+                  "ty": 7,
+                  "nm": "Wave Type",
+                  "mn": "ADBE Wave Warp-0001",
+                  "ix": 1,
+                  "v": { "a": 0, "k": 1 }
+                },
+                {
+                  "ty": 0,
+                  "nm": "Wave Height",
+                  "mn": "ADBE Wave Warp-0002",
+                  "ix": 2,
+                  "v": { "a": 0, "k": 3 }
+                },
+                {
+                  "ty": 0,
+                  "nm": "Wave Width",
+                  "mn": "ADBE Wave Warp-0003",
+                  "ix": 3,
+                  "v": { "a": 0, "k": 40 }
+                },
+                {
+                  "ty": 0,
+                  "nm": "Direction",
+                  "mn": "ADBE Wave Warp-0004",
+                  "ix": 4,
+                  "v": { "a": 0, "k": 90 }
+                },
+                {
+                  "ty": 7,
+                  "nm": "Wave Speed",
+                  "mn": "ADBE Wave Warp-0005",
+                  "ix": 5,
+                  "v": { "a": 0, "k": 1 }
+                },
+                {
+                  "ty": 7,
+                  "nm": "Pinning",
+                  "mn": "ADBE Wave Warp-0006",
+                  "ix": 6,
+                  "v": { "a": 0, "k": 1 }
+                },
+                {
+                  "ty": 0,
+                  "nm": "Phase",
+                  "mn": "ADBE Wave Warp-0007",
+                  "ix": 7,
+                  "v": { "a": 0, "k": 0 }
+                },
+                {
+                  "ty": 7,
+                  "nm": "Antialiasing (Best Quality)",
+                  "mn": "ADBE Wave Warp-0008",
+                  "ix": 8,
+                  "v": { "a": 0, "k": 1 }
+                }
+              ]
+            }
+          ],
+          "shapes": [
+            {
+              "ty": "gr",
+              "it": [
+                {
+                  "ty": "rc",
+                  "d": 1,
+                  "s": { "a": 0, "k": [147, 288] },
+                  "p": { "a": 0, "k": [0, 0] },
+                  "r": { "a": 0, "k": 0 },
+                  "nm": "Rectangle Path 1",
+                  "hd": false
+                },
+                {
+                  "ty": "fl",
+                  "c": {
+                    "a": 0,
+                    "k": [0.407842987659, 0.309803981407, 0.972549019608, 1]
+                  },
+                  "o": { "a": 0, "k": 100 },
+                  "r": 1,
+                  "bm": 0,
+                  "nm": "Fill 1",
+                  "hd": false
+                },
+                {
+                  "ty": "tr",
+                  "p": { "a": 0, "k": [-34.5, 50] },
+                  "a": { "a": 0, "k": [0, 0] },
+                  "s": { "a": 0, "k": [174.953, 110.363] },
+                  "r": { "a": 0, "k": 0 },
+                  "o": { "a": 0, "k": 100 },
+                  "sk": { "a": 0, "k": 0 },
+                  "sa": { "a": 0, "k": 0 },
+                  "nm": "Transform"
+                }
+              ],
+              "nm": "Rectangle 1",
+              "bm": 0,
+              "hd": false
+            }
+          ],
+          "ip": -3,
+          "op": 180,
+          "st": -3,
+          "bm": 0
+        },
+        {
+          "ddd": 0,
+          "ind": 4,
+          "ty": 2,
+          "nm": "Grey",
+          "refId": "image_0",
+          "sr": 1,
+          "ks": {
+            "o": { "a": 0, "k": 100 },
+            "r": { "a": 0, "k": 0 },
+            "p": { "a": 0, "k": [360, 249.5, 0] },
+            "a": { "a": 0, "k": [57.5, 91.5, 0] },
+            "s": { "a": 0, "k": [100, 100, 100] }
+          },
+          "ao": 0,
+          "ef": [
+            {
+              "ty": 5,
+              "nm": "Hue/Saturation",
+              "np": 11,
+              "mn": "ADBE HUE SATURATION",
+              "ix": 1,
+              "en": 1,
+              "ef": [
+                {
+                  "ty": 7,
+                  "nm": "Channel Control",
+                  "mn": "ADBE HUE SATURATION-0002",
+                  "ix": 1,
+                  "v": { "a": 0, "k": 1 }
+                },
+                {},
+                {
+                  "ty": 0,
+                  "nm": "Master Hue",
+                  "mn": "ADBE HUE SATURATION-0004",
+                  "ix": 3,
+                  "v": { "a": 0, "k": 0 }
+                },
+                {
+                  "ty": 0,
+                  "nm": "Master Saturation",
+                  "mn": "ADBE HUE SATURATION-0005",
+                  "ix": 4,
+                  "v": { "a": 0, "k": 0 }
+                },
+                {
+                  "ty": 0,
+                  "nm": "Master Lightness",
+                  "mn": "ADBE HUE SATURATION-0006",
+                  "ix": 5,
+                  "v": { "a": 0, "k": 0 }
+                },
+                {
+                  "ty": 7,
+                  "nm": "Colorize",
+                  "mn": "ADBE HUE SATURATION-0007",
+                  "ix": 6,
+                  "v": { "a": 0, "k": 0 }
+                },
+                {
+                  "ty": 0,
+                  "nm": "Colorize Hue",
+                  "mn": "ADBE HUE SATURATION-0008",
+                  "ix": 7,
+                  "v": { "a": 0, "k": 0 }
+                },
+                {
+                  "ty": 0,
+                  "nm": "Colorize Saturation",
+                  "mn": "ADBE HUE SATURATION-0009",
+                  "ix": 8,
+                  "v": { "a": 0, "k": 25 }
+                },
+                {
+                  "ty": 0,
+                  "nm": "Colorize Lightness",
+                  "mn": "ADBE HUE SATURATION-0010",
+                  "ix": 9,
+                  "v": { "a": 0, "k": 0 }
+                }
+              ]
+            }
+          ],
+          "ip": -3,
+          "op": 180,
+          "st": -3,
+          "bm": 0
+        }
+      ]
+    },
+    {
+      "id": "comp_3",
+      "layers": [
+        {
+          "ddd": 0,
+          "ind": 4,
+          "ty": 2,
+          "nm": "Grey 2",
+          "td": 1,
+          "refId": "image_1",
+          "sr": 1,
+          "ks": {
+            "o": { "a": 0, "k": 100 },
+            "r": { "a": 0, "k": 0 },
+            "p": { "a": 0, "k": [140, 249.5, 0] },
+            "a": { "a": 0, "k": [57.5, 91.5, 0] },
+            "s": { "a": 0, "k": [100, 100, 100] }
+          },
+          "ao": 0,
+          "ip": 0,
+          "op": 180,
+          "st": 0,
+          "bm": 0
+        },
+        {
+          "ddd": 0,
+          "ind": 5,
+          "ty": 4,
+          "nm": "Shape Layer 1",
+          "tt": 1,
+          "sr": 1,
+          "ks": {
+            "o": { "a": 0, "k": 100 },
+            "r": { "a": 0, "k": 0 },
+            "p": {
+              "a": 1,
+              "k": [
+                {
+                  "i": { "x": 0.833, "y": 0.833 },
+                  "o": { "x": 0.167, "y": 0.167 },
+                  "t": 0,
+                  "s": [250, 400, 0],
+                  "to": [0, -9.742, 0],
+                  "ti": [0, 22.192, 0]
+                },
+                {
+                  "i": { "x": 0.833, "y": 0.796 },
+                  "o": { "x": 0.167, "y": 0.167 },
+                  "t": 24,
+                  "s": [164, 349.333, 0],
+                  "to": [0, -16.453, 0],
+                  "ti": [-12.516, 18.001, 0]
+                },
+                {
+                  "i": { "x": 0.833, "y": 0.833 },
+                  "o": { "x": 0.167, "y": 0.133 },
+                  "t": 47,
+                  "s": [146.849, 296.526, 0],
+                  "to": [8.716, -12.535, 0],
+                  "ti": [-15.733, 11.431, 0]
+                },
+                {
+                  "i": { "x": 0.833, "y": 0.833 },
+                  "o": { "x": 0.167, "y": 0.167 },
+                  "t": 64,
+                  "s": [202.121, 260.195, 0],
+                  "to": [14.009, -10.179, 0],
+                  "ti": [-8.097, 8.163, 0]
+                },
+                {
+                  "i": { "x": 0.833, "y": 0.833 },
+                  "o": { "x": 0.167, "y": 0.167 },
+                  "t": 80,
+                  "s": [182.527, 232.414, 0],
+                  "to": [7.521, -7.583, 0],
+                  "ti": [-15.136, 4.949, 0]
+                },
+                {
+                  "i": { "x": 0.833, "y": 0.833 },
+                  "o": { "x": 0.167, "y": 0.167 },
+                  "t": 89,
+                  "s": [167.932, 202.401, 0],
+                  "to": [3.764, -1.231, 0],
+                  "ti": [-15.136, 4.949, 0]
+                },
+                {
+                  "i": { "x": 0.833, "y": 0.833 },
+                  "o": { "x": 0.167, "y": 0.167 },
+                  "t": 105,
+                  "s": [167.932, 202.401, 0],
+                  "to": [3.764, -1.231, 0],
+                  "ti": [0, 0, 0]
+                },
+                {
+                  "i": { "x": 0.833, "y": 0.833 },
+                  "o": { "x": 0.167, "y": 0.167 },
+                  "t": 120,
+                  "s": [167.932, 226.401, 0],
+                  "to": [0, 0, 0],
+                  "ti": [0, 0, 0]
+                },
+                {
+                  "i": { "x": 0.833, "y": 0.833 },
+                  "o": { "x": 0.167, "y": 0.167 },
+                  "t": 141,
+                  "s": [167.932, 268.401, 0],
+                  "to": [0, 0, 0],
+                  "ti": [0, 0, 0]
+                },
+                {
+                  "i": { "x": 0.833, "y": 0.833 },
+                  "o": { "x": 0.167, "y": 0.167 },
+                  "t": 156,
+                  "s": [167.932, 313.401, 0],
+                  "to": [0, 0, 0],
+                  "ti": [0, 0, 0]
+                },
+                { "t": 179, "s": [167.932, 405.401, 0] }
+              ]
+            },
+            "a": { "a": 0, "k": [0, 0, 0] },
+            "s": { "a": 0, "k": [100, 104.786, 100] }
+          },
+          "ao": 0,
+          "hasMask": true,
+          "masksProperties": [
+            {
+              "inv": false,
+              "mode": "a",
+              "pt": {
+                "a": 0,
+                "k": {
+                  "i": [
+                    [11.024, -1.866],
+                    [9, -1],
+                    [15.5, 2],
+                    [16, 0.5],
+                    [0, 0],
+                    [-2.5, 0],
+                    [-13.5, 1.5],
+                    [-11, 3],
+                    [-11, -7.5],
+                    [-10.5, 5.5],
+                    [0, 0],
+                    [0, 0]
+                  ],
+                  "o": [
+                    [-32.5, 5.5],
+                    [-9, 1],
+                    [-15.5, -2],
+                    [-16, -0.5],
+                    [0, 0],
+                    [2.5, 0],
+                    [13.5, -1.5],
+                    [11, -3],
+                    [11, 7.5],
+                    [10.5, -5.5],
+                    [0, 0],
+                    [0, 0]
+                  ],
+                  "v": [
+                    [28.5, -56.185],
+                    [-15.5, -40.185],
+                    [-64.5, -50.685],
+                    [-104, -40.185],
+                    [-124.5, -50.185],
+                    [-117, 136.315],
+                    [-78.5, 150.315],
+                    [-50, 129.315],
+                    [-10.5, 151.815],
+                    [19, 134.815],
+                    [57, 145.315],
+                    [56, -42.685]
+                  ],
+                  "c": true
+                }
+              },
+              "o": { "a": 0, "k": 100 },
+              "x": { "a": 0, "k": 0 },
+              "nm": "Mask 1"
+            }
+          ],
+          "ef": [
+            {
+              "ty": 5,
+              "nm": "Gradient Ramp",
+              "np": 10,
+              "mn": "ADBE Ramp",
+              "ix": 1,
+              "en": 1,
+              "ef": [
+                {
+                  "ty": 3,
+                  "nm": "Start of Ramp",
+                  "mn": "ADBE Ramp-0001",
+                  "ix": 1,
+                  "v": { "a": 0, "k": [80, 110] }
+                },
+                {
+                  "ty": 2,
+                  "nm": "Start Color",
+                  "mn": "ADBE Ramp-0002",
+                  "ix": 2,
+                  "v": {
+                    "a": 0,
+                    "k": [0.258823543787, 0.521568655968, 0.956862747669, 1]
+                  }
+                },
+                {
+                  "ty": 3,
+                  "nm": "End of Ramp",
+                  "mn": "ADBE Ramp-0003",
+                  "ix": 3,
+                  "v": { "a": 0, "k": [225, 301] }
+                },
+                {
+                  "ty": 2,
+                  "nm": "End Color",
+                  "mn": "ADBE Ramp-0004",
+                  "ix": 4,
+                  "v": { "a": 0, "k": [0.588235318661, 0.06274510175, 1, 1] }
+                },
+                {
+                  "ty": 7,
+                  "nm": "Ramp Shape",
+                  "mn": "ADBE Ramp-0005",
+                  "ix": 5,
+                  "v": { "a": 0, "k": 1 }
+                },
+                {
+                  "ty": 0,
+                  "nm": "Ramp Scatter",
+                  "mn": "ADBE Ramp-0006",
+                  "ix": 6,
+                  "v": { "a": 0, "k": 0 }
+                },
+                {
+                  "ty": 0,
+                  "nm": "Blend With Original",
+                  "mn": "ADBE Ramp-0007",
+                  "ix": 7,
+                  "v": { "a": 0, "k": 0 }
+                },
+                { "ty": 6, "nm": "", "mn": "ADBE Ramp-0008", "ix": 8, "v": 0 }
+              ]
+            },
+            {
+              "ty": 5,
+              "nm": "Wave Warp",
+              "np": 10,
+              "mn": "ADBE Wave Warp",
+              "ix": 2,
+              "en": 1,
+              "ef": [
+                {
+                  "ty": 7,
+                  "nm": "Wave Type",
+                  "mn": "ADBE Wave Warp-0001",
+                  "ix": 1,
+                  "v": { "a": 0, "k": 1 }
+                },
+                {
+                  "ty": 0,
+                  "nm": "Wave Height",
+                  "mn": "ADBE Wave Warp-0002",
+                  "ix": 2,
+                  "v": { "a": 0, "k": 3 }
+                },
+                {
+                  "ty": 0,
+                  "nm": "Wave Width",
+                  "mn": "ADBE Wave Warp-0003",
+                  "ix": 3,
+                  "v": { "a": 0, "k": 40 }
+                },
+                {
+                  "ty": 0,
+                  "nm": "Direction",
+                  "mn": "ADBE Wave Warp-0004",
+                  "ix": 4,
+                  "v": { "a": 0, "k": 90 }
+                },
+                {
+                  "ty": 7,
+                  "nm": "Wave Speed",
+                  "mn": "ADBE Wave Warp-0005",
+                  "ix": 5,
+                  "v": { "a": 0, "k": 1 }
+                },
+                {
+                  "ty": 7,
+                  "nm": "Pinning",
+                  "mn": "ADBE Wave Warp-0006",
+                  "ix": 6,
+                  "v": { "a": 0, "k": 1 }
+                },
+                {
+                  "ty": 0,
+                  "nm": "Phase",
+                  "mn": "ADBE Wave Warp-0007",
+                  "ix": 7,
+                  "v": { "a": 0, "k": 0 }
+                },
+                {
+                  "ty": 7,
+                  "nm": "Antialiasing (Best Quality)",
+                  "mn": "ADBE Wave Warp-0008",
+                  "ix": 8,
+                  "v": { "a": 0, "k": 1 }
+                }
+              ]
+            }
+          ],
+          "shapes": [
+            {
+              "ty": "gr",
+              "it": [
+                {
+                  "ty": "rc",
+                  "d": 1,
+                  "s": { "a": 0, "k": [147, 288] },
+                  "p": { "a": 0, "k": [0, 0] },
+                  "r": { "a": 0, "k": 0 },
+                  "nm": "Rectangle Path 1",
+                  "hd": false
+                },
+                {
+                  "ty": "fl",
+                  "c": {
+                    "a": 0,
+                    "k": [0.407842987659, 0.309803981407, 0.972549019608, 1]
+                  },
+                  "o": { "a": 0, "k": 100 },
+                  "r": 1,
+                  "bm": 0,
+                  "nm": "Fill 1",
+                  "hd": false
+                },
+                {
+                  "ty": "tr",
+                  "p": { "a": 0, "k": [-34.5, 50] },
+                  "a": { "a": 0, "k": [0, 0] },
+                  "s": { "a": 0, "k": [174.953, 110.363] },
+                  "r": { "a": 0, "k": 0 },
+                  "o": { "a": 0, "k": 100 },
+                  "sk": { "a": 0, "k": 0 },
+                  "sa": { "a": 0, "k": 0 },
+                  "nm": "Transform"
+                }
+              ],
+              "nm": "Rectangle 1",
+              "bm": 0,
+              "hd": false
+            }
+          ],
+          "ip": 0,
+          "op": 180,
+          "st": 0,
+          "bm": 0
+        },
+        {
+          "ddd": 0,
+          "ind": 6,
+          "ty": 2,
+          "nm": "Grey",
+          "refId": "image_1",
+          "sr": 1,
+          "ks": {
+            "o": { "a": 0, "k": 100 },
+            "r": { "a": 0, "k": 0 },
+            "p": { "a": 0, "k": [140, 249.5, 0] },
+            "a": { "a": 0, "k": [57.5, 91.5, 0] },
+            "s": { "a": 0, "k": [100, 100, 100] }
+          },
+          "ao": 0,
+          "ef": [
+            {
+              "ty": 5,
+              "nm": "Hue/Saturation",
+              "np": 11,
+              "mn": "ADBE HUE SATURATION",
+              "ix": 1,
+              "en": 1,
+              "ef": [
+                {
+                  "ty": 7,
+                  "nm": "Channel Control",
+                  "mn": "ADBE HUE SATURATION-0002",
+                  "ix": 1,
+                  "v": { "a": 0, "k": 1 }
+                },
+                {},
+                {
+                  "ty": 0,
+                  "nm": "Master Hue",
+                  "mn": "ADBE HUE SATURATION-0004",
+                  "ix": 3,
+                  "v": { "a": 0, "k": 0 }
+                },
+                {
+                  "ty": 0,
+                  "nm": "Master Saturation",
+                  "mn": "ADBE HUE SATURATION-0005",
+                  "ix": 4,
+                  "v": { "a": 0, "k": 0 }
+                },
+                {
+                  "ty": 0,
+                  "nm": "Master Lightness",
+                  "mn": "ADBE HUE SATURATION-0006",
+                  "ix": 5,
+                  "v": { "a": 0, "k": 0 }
+                },
+                {
+                  "ty": 7,
+                  "nm": "Colorize",
+                  "mn": "ADBE HUE SATURATION-0007",
+                  "ix": 6,
+                  "v": { "a": 0, "k": 0 }
+                },
+                {
+                  "ty": 0,
+                  "nm": "Colorize Hue",
+                  "mn": "ADBE HUE SATURATION-0008",
+                  "ix": 7,
+                  "v": { "a": 0, "k": 0 }
+                },
+                {
+                  "ty": 0,
+                  "nm": "Colorize Saturation",
+                  "mn": "ADBE HUE SATURATION-0009",
+                  "ix": 8,
+                  "v": { "a": 0, "k": 25 }
+                },
+                {
+                  "ty": 0,
+                  "nm": "Colorize Lightness",
+                  "mn": "ADBE HUE SATURATION-0010",
+                  "ix": 9,
+                  "v": { "a": 0, "k": 0 }
+                }
+              ]
+            }
+          ],
+          "ip": 0,
+          "op": 180,
+          "st": 0,
+          "bm": 0
+        }
+      ]
+    },
+    {
+      "id": "comp_4",
+      "layers": [
+        {
+          "ddd": 0,
+          "ind": 2,
+          "ty": 2,
+          "nm": "Grey 2",
+          "td": 1,
+          "refId": "image_2",
+          "sr": 1,
+          "ks": {
+            "o": { "a": 0, "k": 100 },
+            "r": { "a": 0, "k": 0 },
+            "p": { "a": 0, "k": [250, 250, 0] },
+            "a": { "a": 0, "k": [28.5, 130, 0] },
+            "s": { "a": 0, "k": [100, 100, 100] }
+          },
+          "ao": 0,
+          "ip": 0,
+          "op": 180,
+          "st": 0,
+          "bm": 0
+        },
+        {
+          "ddd": 0,
+          "ind": 3,
+          "ty": 4,
+          "nm": "Shape Layer 1",
+          "tt": 1,
+          "sr": 1,
+          "ks": {
+            "o": { "a": 0, "k": 100 },
+            "r": { "a": 0, "k": 0 },
+            "p": {
+              "a": 1,
+              "k": [
+                {
+                  "i": { "x": 0.833, "y": 0.833 },
+                  "o": { "x": 0.167, "y": 0.167 },
+                  "t": 0,
+                  "s": [268, 421, 0],
+                  "to": [0, -0.822, 0],
+                  "ti": [0, 0, 0]
+                },
+                {
+                  "i": { "x": 0.833, "y": 0.833 },
+                  "o": { "x": 0.167, "y": 0.167 },
+                  "t": 23,
+                  "s": [268, 334, 0],
+                  "to": [0, 0, 0],
+                  "ti": [0, 0, 0]
+                },
+                {
+                  "i": { "x": 0.833, "y": 0.833 },
+                  "o": { "x": 0.167, "y": 0.167 },
+                  "t": 40,
+                  "s": [268, 307, 0],
+                  "to": [0, 0, 0],
+                  "ti": [0, 0, 0]
+                },
+                {
+                  "i": { "x": 0.833, "y": 0.833 },
+                  "o": { "x": 0.167, "y": 0.167 },
+                  "t": 58,
+                  "s": [268, 249, 0],
+                  "to": [0, 0, 0],
+                  "ti": [0, 0, 0]
+                },
+                {
+                  "i": { "x": 0.833, "y": 0.833 },
+                  "o": { "x": 0.167, "y": 0.167 },
+                  "t": 74,
+                  "s": [268, 187, 0],
+                  "to": [0, 0, 0],
+                  "ti": [0, 0, 0]
+                },
+                {
+                  "i": { "x": 0.833, "y": 0.833 },
+                  "o": { "x": 0.167, "y": 0.167 },
+                  "t": 90,
+                  "s": [268, 117, 0],
+                  "to": [0, 0, 0],
+                  "ti": [0, 0, 0]
+                },
+                {
+                  "i": { "x": 0.833, "y": 0.833 },
+                  "o": { "x": 0.167, "y": 0.167 },
+                  "t": 106,
+                  "s": [268, 117, 0],
+                  "to": [0, 0, 0],
+                  "ti": [0, 31.667, 0]
+                },
+                { "t": 179, "s": [268, 421, 0] }
+              ]
+            },
+            "a": { "a": 0, "k": [0, 0, 0] },
+            "s": { "a": 0, "k": [100, 100, 100] }
+          },
+          "ao": 0,
+          "ef": [
+            {
+              "ty": 5,
+              "nm": "Gradient Ramp",
+              "np": 10,
+              "mn": "ADBE Ramp",
+              "ix": 1,
+              "en": 1,
+              "ef": [
+                {
+                  "ty": 3,
+                  "nm": "Start of Ramp",
+                  "mn": "ADBE Ramp-0001",
+                  "ix": 1,
+                  "v": { "a": 0, "k": [180, 163] }
+                },
+                {
+                  "ty": 2,
+                  "nm": "Start Color",
+                  "mn": "ADBE Ramp-0002",
+                  "ix": 2,
+                  "v": { "a": 0, "k": [0.588235318661, 0.06274510175, 1, 1] }
+                },
+                {
+                  "ty": 3,
+                  "nm": "End of Ramp",
+                  "mn": "ADBE Ramp-0003",
+                  "ix": 3,
+                  "v": { "a": 0, "k": [298, 484] }
+                },
+                {
+                  "ty": 2,
+                  "nm": "End Color",
+                  "mn": "ADBE Ramp-0004",
+                  "ix": 4,
+                  "v": {
+                    "a": 0,
+                    "k": [0.258823543787, 0.521568655968, 0.956862747669, 1]
+                  }
+                },
+                {
+                  "ty": 7,
+                  "nm": "Ramp Shape",
+                  "mn": "ADBE Ramp-0005",
+                  "ix": 5,
+                  "v": { "a": 0, "k": 1 }
+                },
+                {
+                  "ty": 0,
+                  "nm": "Ramp Scatter",
+                  "mn": "ADBE Ramp-0006",
+                  "ix": 6,
+                  "v": { "a": 0, "k": 0 }
+                },
+                {
+                  "ty": 0,
+                  "nm": "Blend With Original",
+                  "mn": "ADBE Ramp-0007",
+                  "ix": 7,
+                  "v": { "a": 0, "k": 0 }
+                },
+                { "ty": 6, "nm": "", "mn": "ADBE Ramp-0008", "ix": 8, "v": 0 }
+              ]
+            },
+            {
+              "ty": 5,
+              "nm": "Wave Warp",
+              "np": 10,
+              "mn": "ADBE Wave Warp",
+              "ix": 2,
+              "en": 1,
+              "ef": [
+                {
+                  "ty": 7,
+                  "nm": "Wave Type",
+                  "mn": "ADBE Wave Warp-0001",
+                  "ix": 1,
+                  "v": { "a": 0, "k": 1 }
+                },
+                {
+                  "ty": 0,
+                  "nm": "Wave Height",
+                  "mn": "ADBE Wave Warp-0002",
+                  "ix": 2,
+                  "v": { "a": 0, "k": 7 }
+                },
+                {
+                  "ty": 0,
+                  "nm": "Wave Width",
+                  "mn": "ADBE Wave Warp-0003",
+                  "ix": 3,
+                  "v": { "a": 0, "k": 40 }
+                },
+                {
+                  "ty": 0,
+                  "nm": "Direction",
+                  "mn": "ADBE Wave Warp-0004",
+                  "ix": 4,
+                  "v": { "a": 0, "k": 90 }
+                },
+                {
+                  "ty": 7,
+                  "nm": "Wave Speed",
+                  "mn": "ADBE Wave Warp-0005",
+                  "ix": 5,
+                  "v": { "a": 0, "k": 1 }
+                },
+                {
+                  "ty": 7,
+                  "nm": "Pinning",
+                  "mn": "ADBE Wave Warp-0006",
+                  "ix": 6,
+                  "v": { "a": 0, "k": 1 }
+                },
+                {
+                  "ty": 0,
+                  "nm": "Phase",
+                  "mn": "ADBE Wave Warp-0007",
+                  "ix": 7,
+                  "v": { "a": 0, "k": 0 }
+                },
+                {
+                  "ty": 7,
+                  "nm": "Antialiasing (Best Quality)",
+                  "mn": "ADBE Wave Warp-0008",
+                  "ix": 8,
+                  "v": { "a": 0, "k": 1 }
+                }
+              ]
+            }
+          ],
+          "shapes": [
+            {
+              "ty": "gr",
+              "it": [
+                {
+                  "ty": "rc",
+                  "d": 1,
+                  "s": { "a": 0, "k": [147, 288] },
+                  "p": { "a": 0, "k": [0, 0] },
+                  "r": { "a": 0, "k": 0 },
+                  "nm": "Rectangle Path 1",
+                  "hd": false
+                },
+                {
+                  "ty": "fl",
+                  "c": {
+                    "a": 0,
+                    "k": [0.407842987659, 0.309803981407, 0.972549019608, 1]
+                  },
+                  "o": { "a": 0, "k": 100 },
+                  "r": 1,
+                  "bm": 0,
+                  "nm": "Fill 1",
+                  "hd": false
+                },
+                {
+                  "ty": "tr",
+                  "p": { "a": 0, "k": [-39.5, 197] },
+                  "a": { "a": 0, "k": [0, 0] },
+                  "s": { "a": 0, "k": [174.953, 147.262] },
+                  "r": { "a": 0, "k": 0 },
+                  "o": { "a": 0, "k": 100 },
+                  "sk": { "a": 0, "k": 0 },
+                  "sa": { "a": 0, "k": 0 },
+                  "nm": "Transform"
+                }
+              ],
+              "nm": "Rectangle 1",
+              "bm": 0,
+              "hd": false
+            }
+          ],
+          "ip": 0,
+          "op": 180,
+          "st": 0,
+          "bm": 0
+        },
+        {
+          "ddd": 0,
+          "ind": 4,
+          "ty": 2,
+          "nm": "Grey",
+          "refId": "image_2",
+          "sr": 1,
+          "ks": {
+            "o": { "a": 0, "k": 100 },
+            "r": { "a": 0, "k": 0 },
+            "p": { "a": 0, "k": [250, 250, 0] },
+            "a": { "a": 0, "k": [28.5, 130, 0] },
+            "s": { "a": 0, "k": [100, 100, 100] }
+          },
+          "ao": 0,
+          "ef": [
+            {
+              "ty": 5,
+              "nm": "Hue/Saturation",
+              "np": 11,
+              "mn": "ADBE HUE SATURATION",
+              "ix": 1,
+              "en": 1,
+              "ef": [
+                {
+                  "ty": 7,
+                  "nm": "Channel Control",
+                  "mn": "ADBE HUE SATURATION-0002",
+                  "ix": 1,
+                  "v": { "a": 0, "k": 1 }
+                },
+                {},
+                {
+                  "ty": 0,
+                  "nm": "Master Hue",
+                  "mn": "ADBE HUE SATURATION-0004",
+                  "ix": 3,
+                  "v": { "a": 0, "k": 0 }
+                },
+                {
+                  "ty": 0,
+                  "nm": "Master Saturation",
+                  "mn": "ADBE HUE SATURATION-0005",
+                  "ix": 4,
+                  "v": { "a": 0, "k": 0 }
+                },
+                {
+                  "ty": 0,
+                  "nm": "Master Lightness",
+                  "mn": "ADBE HUE SATURATION-0006",
+                  "ix": 5,
+                  "v": { "a": 0, "k": 0 }
+                },
+                {
+                  "ty": 7,
+                  "nm": "Colorize",
+                  "mn": "ADBE HUE SATURATION-0007",
+                  "ix": 6,
+                  "v": { "a": 0, "k": 0 }
+                },
+                {
+                  "ty": 0,
+                  "nm": "Colorize Hue",
+                  "mn": "ADBE HUE SATURATION-0008",
+                  "ix": 7,
+                  "v": { "a": 0, "k": 0 }
+                },
+                {
+                  "ty": 0,
+                  "nm": "Colorize Saturation",
+                  "mn": "ADBE HUE SATURATION-0009",
+                  "ix": 8,
+                  "v": { "a": 0, "k": 25 }
+                },
+                {
+                  "ty": 0,
+                  "nm": "Colorize Lightness",
+                  "mn": "ADBE HUE SATURATION-0010",
+                  "ix": 9,
+                  "v": { "a": 0, "k": 0 }
+                }
+              ]
+            }
+          ],
+          "ip": 0,
+          "op": 180,
+          "st": 0,
+          "bm": 0
+        }
+      ]
+    }
+  ],
+  "layers": [
+    {
+      "ddd": 0,
+      "ind": 2,
+      "ty": 0,
+      "nm": "Elements - Spin",
+      "refId": "comp_0",
+      "sr": 1,
+      "ks": {
+        "o": { "a": 0, "k": 100 },
+        "r": { "a": 0, "k": 0 },
+        "p": { "a": 0, "k": [250, 250, 0] },
+        "a": { "a": 0, "k": [250, 250, 0] },
+        "s": { "a": 0, "k": [100, 100, 100] }
+      },
+      "ao": 0,
+      "w": 500,
+      "h": 500,
+      "ip": 0,
+      "op": 180,
+      "st": 0,
+      "bm": 0
+    }
+  ],
+  "markers": []
+}
