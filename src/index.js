@@ -9,17 +9,19 @@ import { store } from "./redux/store"
 
 // ** import third party
 import { Toaster } from "react-hot-toast"
+import { Amplify } from 'aws-amplify';
+import awsExports from './aws-exports';
+Amplify.configure(awsExports);
 
-// ** import api loader
-import ApiLoader from "./components/ApiLoader"
 
 const App = lazy(() => import("./App"))
 const root = ReactDOM.createRoot(document.getElementById("root"))
 
 root.render(
-  <Provider store={store}>
-    {/* <ApiLoader /> */}
-    <Toaster position="top-right" reverseOrder={false} />
     <App />
-  </Provider>
+  // <Provider store={store}>
+  //   {/* <ApiLoader /> */}
+  //   <Toaster position="top-right" reverseOrder={false} />
+  //
+  // </Provider>
 )

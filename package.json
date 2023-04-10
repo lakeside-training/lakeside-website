@@ -18,6 +18,7 @@
     "@uppy/aws-s3-multipart": "^3.0.2",
     "amazon-cognito-identity-js": "^6.1.2",
     "apexcharts": "^3.36.3",
+    "aws-amplify": "^5.0.25",
     "aws-sdk": "^2.1286.0",
     "axios": "^0.27.2",
     "chart.js": "^3.9.1",
