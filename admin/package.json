@@ -1,0 +1,90 @@
+{
+  "name": "lakeside",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.204.0",
+    "@aws-sdk/lib-storage": "^3.204.0",
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@fontsource/plus-jakarta-sans": "^4.5.10",
+    "@material-tailwind/react": "^1.2.4",
+    "@mui/material": "^5.10.15",
+    "@reduxjs/toolkit": "^1.8.3",
+    "@tailwindcss/line-clamp": "^0.4.2",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@uppy/aws-s3-multipart": "^3.0.2",
+    "amazon-cognito-identity-js": "^6.1.2",
+    "apexcharts": "^3.36.3",
+    "aws-amplify": "^5.0.25",
+    "aws-sdk": "^2.1286.0",
+    "axios": "^0.27.2",
+    "chart.js": "^3.9.1",
+    "classnames": "^2.3.2",
+    "create-app-react": "^1.0.6",
+    "date-and-time": "^2.4.1",
+    "flowbite": "^1.5.3",
+    "flowbite-datepicker": "^1.2.2",
+    "flowbite-react": "^0.3.2",
+    "framer-motion": "^7.6.5",
+    "javascript-time-ago": "^2.5.9",
+    "lottie-react": "^2.4.0",
+    "react": "^18.2.0",
+    "react-apexcharts": "^1.4.0",
+    "react-chartjs-2": "^4.3.1",
+    "react-copy-to-clipboard": "^5.1.0",
+    "react-datepicker": "^4.8.0",
+    "react-dom": "^18.2.0",
+    "react-feather": "^2.0.10",
+    "react-hot-toast": "^2.4.0",
+    "react-images-uploading": "^3.1.7",
+    "react-paginate": "^8.1.4",
+    "react-promise-tracker": "^2.1.1",
+    "react-redux": "^8.0.2",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "5.0.1",
+    "react-scroll": "^1.8.7",
+    "react-select": "^5.6.1",
+    "react-spinners": "^0.13.4",
+    "react-switch": "^7.0.0",
+    "react-tag-input": "^6.8.1",
+    "react-tag-input-component": "^2.0.2",
+    "react-time-ago": "^7.2.1",
+    "react-toastify": "^9.0.8",
+    "reactstrap-date-picker": "^1.0.4",
+    "reactstrap-date-picker2": "^1.0.4",
+    "redux": "^4.2.0",
+    "sassy-datepicker": "^0.10.1",
+    "tailwind-scrollbar-hide": "^1.1.7",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "../node_modules/.bin/react-scripts start",
+    "build": "../node_modules/.bin/react-scripts build",
+    "test": "../node_modules/.bin/react-scripts test",
+    "eject": "../node_modules/.bin/react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.1.8"
+  }
+}

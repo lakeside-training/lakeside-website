@@ -1,0 +1,85 @@
+{
+    "data": {
+        "course_tags": [
+            "Cloud",
+            "mongodb"
+        ],
+        "course_type": "Lab",
+        "course_icon": "https://peacockimage.s3.ap-south-1.amazonaws.com/lakeside/course/dae94d0f-439f-4116-bff4-de5aba4655cf.jpeg",
+        "course_image": "https://peacockimage.s3.ap-south-1.amazonaws.com/lakeside/course/0602f08d-942f-4922-aa26-7dc9b6710ce9.jpeg",
+        "discount_price": "88",
+        "lab_link": "http://localhost:3000/add-new",
+        "modules": [],
+        "name": "mongo db",
+        "course_track": "Cloud Computing",
+        "lab_modules": [
+            {
+                "questions": [
+                    {
+                        "question": "why we using mongo db?",
+                        "choice": [
+                            {
+                                "correct": false,
+                                "value": "easy to use",
+                                "id": "1"
+                            },
+                            {
+                                "correct": false,
+                                "value": "authentication ",
+                                "id": "2"
+                            },
+                            {
+                                "correct": false,
+                                "value": "store data ",
+                                "id": "3"
+                            },
+                            {
+                                "correct": true,
+                                "value": "store data  and easy to use!",
+                                "id": "4"
+                            }
+                        ],
+                        "id": "1"
+                    },
+                    {
+                        "question": "its  safe  to use ?",
+                        "choice": [
+                            {
+                                "correct": true,
+                                "value": "yes",
+                                "id": "1"
+                            },
+                            {
+                                "correct": false,
+                                "value": "no",
+                                "id": "2"
+                            },
+                            {
+                                "correct": false,
+                                "value": "may be not ",
+                                "id": "3"
+                            },
+                            {
+                                "correct": false,
+                                "value": "no idea",
+                                "id": "4"
+                            }
+                        ],
+                        "id": "2"
+                    }
+                ],
+                "moduleHeading": "how the data base is working ?",
+                "id": "1",
+                "moduleDiscription": "introduction to the data base"
+            }
+        ],
+        "price_tag": "$",
+        "description": "An Amazon Machine Image (AMI) is a supported and maintained image provided by AWS that",
+        "id": "93b640f0-48b0-419d-b70b-226b845488d1",
+        "price": "199",
+        "duration": "3",
+        "lab_description": "An Amazon Machine Image (AMI) is a supported and maintained image provided by AWS that"
+    },
+    "success": true,
+    "category": "Lab"
+}

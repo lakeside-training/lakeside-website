@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: "Plus Jakarta Sans";
+  margin-left: calc(100vw - 100%);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+input[type=checkbox]:checked {
+  background-color: #111 !important;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* custom fonts */
+@font-face {
+  font-family: "pecita";
+  src: url("./assets/fonts/pecita.book.otf") format("truetype");
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500&display=swap");
+
+/* hide scroll bar */
+/* ::-webkit-scrollbar {
+  display: none;
+} */
+
+@media (max-width: 600px) {
+  .mobileView {
+    display: none;
+  }
+}
+
+/* customInput for country code */
+.customInputSize input {
+
+  padding-left: 62px !important;
+  margin: 0 !important;
+  width: 100% !important;
+  height: 57px !important;
+  border: none !important;
+  border-radius: 12px !important;
+}
+
+.customInputSize input:focus {
+  outline: none;
+  box-shadow: none !important;
+}
+
+.customInputSize .flag-dropdown .selected-flag:hover,
+.customInputSize .flag-dropdown .selected-flag.open:hover,
+.customInputSize .flag-dropdown .selected-flag.open,
+.customInputSize .flag-dropdown.open {
+  background: #f5f5f5 !important;
+}
+
+.customInputSize .flag-dropdown {
+  border: none !important;
+  padding-inline: 8px !important;
+  border-top-left-radius: 12px !important;
+  border-bottom-left-radius: 12px !important;
+}
+
+/* customInput for country code */
+
+.edits:hover {
+  color: red;
+}
+
+.plsadd::placeholder {
+  color: red;
+}
+
+.video-model>div {
+  padding: 0 !important;
+}
+
+.course-step .swiper-wrapper {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+/* for chrome hidding scrollbar  */
+
+
+#icon_container svg {
+  width: 200px !important;
+  height: auto !important;
+}
+
+
+.otpInput {
+  outline: none;
+  min-width: 45px;
+  min-height: 40px;
+  border-radius: 5px;
+  margin: 0 5px !important;
+  font-size: 25px !important;
+  color: white;
+  background: #1E1E1E;
+}
