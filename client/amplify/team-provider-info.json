@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-lakesidewebsite-dev-110801-authRole",
+      "UnauthRoleArn": "arn:aws:iam::223154539056:role/amplify-lakesidewebsite-dev-110801-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::223154539056:role/amplify-lakesidewebsite-dev-110801-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-lakesidewebsite-dev-110801-deployment",
+      "UnauthRoleName": "amplify-lakesidewebsite-dev-110801-unauthRole",
+      "StackName": "amplify-lakesidewebsite-dev-110801",
+      "StackId": "arn:aws:cloudformation:us-east-1:223154539056:stack/amplify-lakesidewebsite-dev-110801/e09ef9b0-d7b9-11ed-a103-12bdc2b1cf97",
+      "AmplifyAppId": "d25k9le5s994bk"
+    }
+  }
+}
