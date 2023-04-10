@@ -44,7 +44,7 @@
     "react-promise-tracker": "^2.1.1",
     "react-redux": "^8.0.2",
     "react-router-dom": "^6.3.0",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "react-scroll": "^1.8.7",
     "react-select": "^5.6.1",
     "react-spinners": "^0.13.4",
@@ -61,10 +61,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "../node_modules/.bin/react-scripts start",
-    "build": "../node_modules/.bin/react-scripts build",
-    "test": "../node_modules/.bin/react-scripts test",
-    "eject": "../node_modules/.bin/react-scripts eject"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
