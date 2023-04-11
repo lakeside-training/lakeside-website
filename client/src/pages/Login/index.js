@@ -46,49 +46,59 @@ const Login = () => {
     // const userID = JSON.parse(localStorage.getItem("userInfo"));
 
     const handleSubmit = async () => {
-        const user = await new CognitoUser({
-            Username: email,
-            Pool: UserPool
-        })
-        const authDetails = await new AuthenticationDetails({
-            Username: email,
-            Password: password
-        })
-        user.authenticateUser(authDetails, {
-            onSuccess: async (datas) => {
-                if (datas?.idToken) {
-                    setLoader(true)
-                    const { data } = await axios.post("/user/login", {
-                        email: email
-                    })
-                    dispatch(login(data.data))
-                    localStorage.setItem("userInfo", JSON.stringify(data.data))
-                    console.log(data.data[0].id)
-                    const checkingPlan = await axios.post("/user/getParticularUser", {
-                        id: data?.data?.[0]?.id
-                        // || userData?.id || userID === null ? localStorage.getItem("UserId") : userID[0].id
-                    })
-                    setLoader(false)
-                    if (checkingPlan.data[0].paymentPlan === "") {
-                        return navigate("/payment/plan")
-                    } else {
-                        navigate("/dashboard")
-                    }
-                } else {
-                    toast.error("Something went wrong!")
-                }
-            },
-            onFailure: (err) => {
-                setLoader(false)
-                if (err.message === "User is not confirmed.") {
-                    return toast.error("Account Verification Required")
-                }
-                if (err.message === "User is disabled.") {
-                    return setShow(true)
-                }
-                return toast.error(err.message)
+        return Auth.signIn(email, password).then( async token => {
+            if (token) {
+                const userInfo = await Auth.currentUserInfo();
+                const userPoolInfo = await Auth.currentUserPoolUser()
+                console.info('UserInfo '+ userInfo)
+                console.log('UserPoolInfo '+ userPoolInfo)
+                // localStorage.setItem('token',)
             }
-        })
+        }).catch(e => console.error(e))
+        //console.debug(user);
+        // const user = await new CognitoUser({
+        //     Username: email,
+        //     Pool: UserPool
+        // })
+        // const authDetails = await new AuthenticationDetails({
+        //     Username: email,
+        //     Password: password
+        // })
+        // user.authenticateUser(authDetails, {
+        //     onSuccess: async (datas) => {
+        //         if (datas?.idToken) {
+        //             setLoader(true)
+        //             const { data } = await axios.post("/user/login", {
+        //                 email: email
+        //             })
+        //             dispatch(login(data.data))
+        //             localStorage.setItem("userInfo", JSON.stringify(data.data))
+        //             console.log(data.data[0].id)
+        //             const checkingPlan = await axios.post("/user/getParticularUser", {
+        //                 id: data?.data?.[0]?.id
+        //                 // || userData?.id || userID === null ? localStorage.getItem("UserId") : userID[0].id
+        //             })
+        //             setLoader(false)
+        //             if (checkingPlan.data[0].paymentPlan === "") {
+        //                 return navigate("/payment/plan")
+        //             } else {
+        //                 navigate("/dashboard")
+        //             }
+        //         } else {
+        //             toast.error("Something went wrong!")
+        //         }
+        //     },
+        //     onFailure: (err) => {
+        //         setLoader(false)
+        //         if (err.message === "User is not confirmed.") {
+        //             return toast.error("Account Verification Required")
+        //         }
+        //         if (err.message === "User is disabled.") {
+        //             return setShow(true)
+        //         }
+        //         return toast.error(err.message)
+        //     }
+        // })
     }
 
     return (

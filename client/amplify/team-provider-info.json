@@ -10,6 +10,11 @@
       "StackName": "amplify-lakesidewebsite-dev-110801",
       "StackId": "arn:aws:cloudformation:us-east-1:223154539056:stack/amplify-lakesidewebsite-dev-110801/e09ef9b0-d7b9-11ed-a103-12bdc2b1cf97",
       "AmplifyAppId": "d25k9le5s994bk"
+    },
+    "categories": {
+      "auth": {
+        "lakesideWebsite": {}
+      }
     }
   }
 }

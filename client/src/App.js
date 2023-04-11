@@ -5,6 +5,7 @@ import { BrowserRouter } from "react-router-dom"
 import Router from "./router/Router"
 import "@fontsource/plus-jakarta-sans"
 
+
 const App = () => {
   return (
     <BrowserRouter>

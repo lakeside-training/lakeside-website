@@ -9,6 +9,10 @@ import { Toaster } from "react-hot-toast"
 // ** api loader
 import ApiLoader from "./components/ApiLoader"
 
+import { Amplify } from 'aws-amplify';
+import awsExports from './aws-exports';
+Amplify.configure(awsExports);
+
 const App = lazy(() => import("./App"))
 const root = ReactDOM.createRoot(document.getElementById("root"))
 root.render(

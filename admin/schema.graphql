@@ -1,0 +1,77 @@
+type Track @model @auth(rules: [{allow: public, operations: [read]}, {allow: private}]) {
+  id: ID!
+  name: String
+  Courses: [Course] @hasMany(indexName: "byTrack", fields: ["id"])
+  Labs: [Course] @hasMany(indexName: "byTrack", fields: ["id"])
+}
+
+type Lab @model @auth(rules: [{allow: public, operations: [read]}, {allow: private}]) {
+  id: ID!
+  Modules: [Module] @hasMany(indexName: "byLab", fields: ["id"])
+  trackID: ID! @index(name: "byTrack")
+  image: AWSURL
+  icon: AWSURL
+  name: String
+  description: String
+  tags: [String]
+  price: Float
+  discountPrice: String
+  duration: String
+  labUrl: String
+  labIamPolicy: String
+  labServiceRole: String
+  isEnabled: String
+}
+
+type Resource @model @auth(rules: [{allow: public, operations: [read]}, {allow: private}]) {
+  id: ID!
+  modules: [Module] @manyToMany(relationName: "ModuleResource")
+  name: String
+  image: AWSURL
+  link: String
+  category: String
+}
+
+type Module @model @auth(rules: [{allow: public, operations: [read]}, {allow: private}]) {
+  id: ID!
+  labID: ID! @index(name: "byLab")
+  courseID: ID! @index(name: "byCourse")
+  Resources: [Resource] @manyToMany(relationName: "ModuleResource")
+  heading: String
+  description: String
+  questions: [AWSJSON]
+}
+
+type Course @model @auth(rules: [{allow: public, operations: [read]}, {allow: private}]) {
+  id: ID!
+  Users: [User] @manyToMany(relationName: "CourseUser")
+  image: AWSURL
+  icon: AWSURL
+  name: String
+  descrption: String
+  tags: [String]
+  price: Float
+  discountPrice: Float
+  duration: String
+  isEnabled: String
+  trackID: ID! @index(name: "byTrack")
+}
+
+type User @model @auth(rules: [{allow: public, operations: [create, read]}, {allow: private}]) {
+  id: ID!
+  courses: [Course] @manyToMany(relationName: "CourseUser")
+  firstName: String
+  lastName: String
+  email: AWSEmail
+  bio: String
+  userName: String
+  phone: String
+  country: String
+  referalCode: String
+  isActive: String
+  isPromotion: String
+  isTutor: String
+  areaOfInterest: [AWSJSON]
+  profilePicture: AWSURL
+}
+ 

@@ -1,0 +1,13 @@
+{
+  "resourceName": "s3lakesidewebsitestorage64ee15cb",
+  "bucketName": "lakesidewebsite-storage-64ee15cb",
+  "policyUUID": "f40f52b3",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "READ"
+  ],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ"
+  ]
+}

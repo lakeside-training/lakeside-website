@@ -1,7 +1,7 @@
 import axios from "./axios"
 
 const instance = axios.create({
-  baseURL: process.env.REACT_APP_SERVER_URL
+  baseURL: 'https://lake-side-backend-production.up.railway.app'
   
   // "https://lake-side-backend-production.up.railway.app"
   

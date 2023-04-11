@@ -5,8 +5,15 @@ import CourseCard from "../../components/CourseCard"
 import Spinner from "../../components/spinner/Spinner"
 // import RegisterCard from "../../components/RegisterCard"
 
+import { API } from '@aws-amplify/api'
+import config from '../../aws-exports'
+import { listCourses, listTracks } from '../../graphql/queries'
+
 /// ** import axios
-import axios from "../../axios"
+//import axios from "../../axios"
+
+// after your imports
+API.configure(config)
 
 const CoursesPage = () => {
     const [category, setCategory] = useState([])
@@ -28,9 +35,12 @@ const CoursesPage = () => {
     useEffect(() => {
         const getAllCategory = async () => {
             try {
-                const { data } = await axios.get("/courseTrack/all")
-
-                setCategory(data.data)
+                // const { data } = await axios.get("/courseTrack/all")
+                const data = await API.graphql({
+                    query: listTracks
+                })
+                console.log(data)
+                //setCategory(data.data)
             } catch (error) {
                 console.log(error)
             }
@@ -57,12 +67,15 @@ const CoursesPage = () => {
         setAllCourseData([])
         const getAllCourse = async () => {
             try {
-                const { data } = await axios.get(`/course/all/${type || ""}`)
-                console.log("data", data.data)
-                const filter = data.data.filter((i) => i.course_enable === "true")
-                setAllCourseData(() => {
-                    return filter
+                //const { data } = await axios.get(`/course/all/${type || ""}`)
+                const data = await API.graphql({
+                    query: listCourses
                 })
+                console.log("data: ", data)
+                //const filter = data.data.filter((i) => i.course_enable === "true")
+                // setAllCourseData(() => {
+                //     return filter
+                // })
             } catch (error) {
                 console.log(error)
             }

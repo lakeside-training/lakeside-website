@@ -11,6 +11,8 @@ import { motion } from "framer-motion";
 // ** import axios
 import axios from "../../axios";
 
+import { Auth } from 'aws-amplify';
+
 const Login = () => {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
@@ -19,17 +21,19 @@ const Login = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
-			const { data } = await axios.post("/admin/login", {
-				email,
-				password,
-			});
-			if (data.success) {
-				localStorage.setItem("userToken", data.token);
-				toast.success(data.status);
-				navigate("/");
-			} else {
-				toast.error(data.status);
-			}
+			const user = await Auth.signIn(email, password);
+			console.log('The user is: ' + user)
+			// const { data } = await axios.post("/admin/login", {
+			// 	email,
+			// 	password,
+			// });
+			// if (data.success) {
+			// 	localStorage.setItem("userToken", data.token);
+			// 	toast.success(data.status);
+			// 	navigate("/");
+			// } else {
+			// 	toast.error(data.status);
+			// }
 		} catch (error) {
 			toast.error(error.message || error.response.data.message, {
 				icon: "🚨",
