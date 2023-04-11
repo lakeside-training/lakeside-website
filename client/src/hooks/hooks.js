@@ -1,5 +1,10 @@
 import React from 'react'
+import { useContext } from "react"
+import { AuthContext } from "../contexts/AuthContext"
 
+const useAuth = () => useContext(AuthContext)
+
+export default useAuth
 export const useTimer = ({duration}) => {
   console.log(duration)
   const [seconds, setSeconds] = React.useState(duration)

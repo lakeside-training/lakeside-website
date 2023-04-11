@@ -1,8 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect, useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
-import UserPool, { facebookLogin, googleLogin } from "../../components/UserPool/userPool"
-import { CognitoUser, AuthenticationDetails } from "amazon-cognito-identity-js"
 import { useDispatch } from "react-redux"
 import toast from "react-hot-toast"
 // ** import custom icons
@@ -14,22 +12,18 @@ import axios from "../../axios"
 import { trackPromise } from "react-promise-tracker"
 import { Modal, Button } from "flowbite-react"
 
-// ** import amplify
-import { Auth } from "aws-amplify"
-
 /** import redux */
 import { useSelector } from "react-redux"
 import Spinner from "../../components/spinner/Spinner"
 import { Eye, EyeOff } from "react-feather"
+import useAuth from "../../hooks/hooks";
 
 const Login = () => {
-    let { auth } = useSelector((state) => state.auth)
-    const userData = auth?.[0]
-
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
-    const dispatch = useDispatch()
+    //const dispatch = useDispatch()
     const navigate = useNavigate()
+    const { signIn, isAuthenticated, isAuthenticating } = useAuth()
     const [show, setShow] = useState(false)
     const [showPassword, setShowPassword] = useState("password")
     const [loader, setLoader] = useState(false)
@@ -44,17 +38,36 @@ const Login = () => {
     }
 
     // const userID = JSON.parse(localStorage.getItem("userInfo"));
+    useEffect(() => {
+        if (isAuthenticated) {
+          navigate("/dashboard", { replace: true })
+        }
+      }, [isAuthenticated])
+
+    if (isAuthenticating || isAuthenticated) {
+    return <Spinner />
+  }
 
     const handleSubmit = async () => {
-        return Auth.signIn(email, password).then( async token => {
-            if (token) {
-                const userInfo = await Auth.currentUserInfo();
-                const userPoolInfo = await Auth.currentUserPoolUser()
-                console.info('UserInfo '+ userInfo)
-                console.log('UserPoolInfo '+ userPoolInfo)
-                // localStorage.setItem('token',)
-            }
-        }).catch(e => console.error(e))
+        try {
+            // user sign in
+            await signIn({ email: email, password: password })
+            setLoader(true)
+            navigate("/dashboard", { replace: true })
+            setLoader(false)
+        } catch (err) {
+            console.info(err)
+        }
+    // const handleSubmit = async () => {
+    //     return Auth.signIn(email, password).then( async token => {
+    //         if (token) {
+    //             const userInfo = await Auth.currentUserInfo();
+    //             const userPoolInfo = await Auth.currentUserPoolUser()
+    //             console.info('UserInfo '+ userInfo)
+    //             console.log('UserPoolInfo '+ userPoolInfo)
+    //             // localStorage.setItem('token',)
+    //         }
+    //     }).catch(e => console.error(e))
         //console.debug(user);
         // const user = await new CognitoUser({
         //     Username: email,

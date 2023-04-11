@@ -8,9 +8,10 @@ import { Toaster } from "react-hot-toast"
 
 // ** api loader
 import ApiLoader from "./components/ApiLoader"
+import AuthProvider from "./contexts/AuthContext";
 
-import { Amplify } from 'aws-amplify';
 import awsExports from './aws-exports';
+import {Amplify} from "aws-amplify";
 Amplify.configure(awsExports);
 
 const App = lazy(() => import("./App"))
@@ -18,7 +19,10 @@ const root = ReactDOM.createRoot(document.getElementById("root"))
 root.render(
   <Provider store={store}>
     <Toaster position="top-center" />
-    <ApiLoader />
-    <App />
+      <AuthProvider>
+          <ApiLoader />
+            <App />
+      </AuthProvider>
+
   </Provider>
 )

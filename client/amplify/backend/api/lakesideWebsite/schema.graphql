@@ -1,4 +1,4 @@
-type Track @model @auth(rules: [{allow: public, operations: [read]}, {allow: private}]) {
+type Track @model @auth(rules: [{allow: public, operations: [read]}, { allow: groups, groups: ["lakeside_admin"]}]) {
   id: ID!
   name: String
   Courses: [Course] @hasMany(indexName: "byTrack", fields: ["id"])
@@ -6,7 +6,7 @@ type Track @model @auth(rules: [{allow: public, operations: [read]}, {allow: pri
   isEnabled: Boolean
 }
 
-type Lab @model @auth(rules: [{allow: public, operations: [read]}, {allow: private}]) {
+type Lab @model @auth(rules: [{allow: public, operations: [read]}, { allow: groups, groups: ["lakeside_admin"]}]) {
   id: ID!
   Modules: [Module] @hasMany(indexName: "byLab", fields: ["id"])
   trackID: ID! @index(name: "byTrack")
@@ -21,19 +21,20 @@ type Lab @model @auth(rules: [{allow: public, operations: [read]}, {allow: priva
   labUrl: String
   labIamPolicy: String
   labServiceRole: String
-  isEnabled: String
+  isEnabled: Boolean
 }
 
-type Resource @model @auth(rules: [{allow: public, operations: [read]}, {allow: private}]) {
+type Resource @model @auth(rules: [{allow: public, operations: [read]}, { allow: groups, groups: ["lakeside_admin"]}]) {
   id: ID!
   modules: [Module] @manyToMany(relationName: "ModuleResource")
   name: String
   image: AWSURL
   link: String
   category: String
+  IsEnabled: Boolean
 }
 
-type Module @model @auth(rules: [{allow: public, operations: [read]}, {allow: private}]) {
+type Module @model @auth(rules: [{allow: public, operations: [read]}, { allow: groups, groups: ["lakeside_admin"]}]) {
   id: ID!
   labID: ID! @index(name: "byLab")
   courseID: ID! @index(name: "byCourse")
@@ -41,9 +42,10 @@ type Module @model @auth(rules: [{allow: public, operations: [read]}, {allow: pr
   heading: String
   description: String
   questions: [AWSJSON]
+  isEnabled: Boolean
 }
 
-type Course @model @auth(rules: [{allow: public, operations: [read]}, {allow: private}]) {
+type Course @model @auth(rules: [{allow: public, operations: [create, read]}, { allow: groups, groups: ["lakeside_admin"]}]) {
   id: ID!
   Users: [User] @manyToMany(relationName: "CourseUser")
   image: AWSURL
@@ -54,11 +56,11 @@ type Course @model @auth(rules: [{allow: public, operations: [read]}, {allow: pr
   price: Float
   discountPrice: Float
   duration: String
-  isEnabled: String
+  isEnabled: Boolean
   trackID: ID! @index(name: "byTrack")
 }
 
-type User @model @auth(rules: [{allow: public, operations: [create, read]}, {allow: private}]) {
+type User @model @auth(rules: [{allow: public, operations: [create, read]}, { allow: owner}, { allow: groups, groups: ["lakeside_admin"]}]) {
   id: ID!
   courses: [Course] @manyToMany(relationName: "CourseUser")
   firstName: String

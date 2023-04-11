@@ -7,8 +7,8 @@ import logo from "../../assets/logo/logo.svg";
 import OtpInput from "react-otp-input";
 import successImg from "../../assets/success.png";
 import { Link, useNavigate } from "react-router-dom";
+import { animated, useSpring } from '@react-spring/web'
 import axios from "../../axios";
-import FadeIn from "react-fade-in/lib/FadeIn";
 
 const ForgotPassword = () => {
   const [visible, setVisible] = useState(false);
@@ -30,6 +30,14 @@ const ForgotPassword = () => {
     confirmPass: "",
   });
 
+  const FadeIn = ({ isVisible, children }) => {
+  const styles = useSpring({
+    opacity: isVisible ? 1 : 0,
+    y: isVisible ? 0 : 24,
+  })
+
+  return <animated.div style={styles}>{children}</animated.div>
+}
   const hadleEmail = async (e) => {
     e.preventDefault();
     setLoader(true);

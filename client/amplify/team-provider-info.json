@@ -14,6 +14,9 @@
     "categories": {
       "auth": {
         "lakesideWebsite": {}
+      },
+      "storage": {
+        "s3lakesidewebsitestorage64ee15cb": {}
       }
     }
   }

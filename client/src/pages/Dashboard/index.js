@@ -15,8 +15,8 @@ import Profile from "./Profile";
 import Refer from "./Refer";
 import { getTokens, messaging } from "../../firebase";
 import { onMessage } from "firebase/messaging";
+import {NotificationContainer, NotificationManager} from 'react-notifications';
 import { toast } from "react-hot-toast";
-import addNotification from 'react-push-notification';
 import { notification } from "../../redux/slices/notification";
 import BuyLab from "./buyLab";
 
@@ -26,13 +26,7 @@ const Dashboard = () => {
 	const dispatch = useDispatch();
 
 	const sendNotification = (title, message, icon) => {
-		addNotification({
-			title,
-			message,
-			icon: icon,
-			duration: 4000,
-			native: true
-		})
+		NotificationManager.info(message, title, 4000, {}, true)
 	}
 
 	const getToken = async () => {
@@ -124,6 +118,7 @@ const Dashboard = () => {
 					{/* </div> */}
 				</div>
 			</div>
+			<NotificationContainer/>
 		</div>
 	);
 };

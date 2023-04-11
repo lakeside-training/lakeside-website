@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "react-router-dom"
 
 // ** import hooks
-import { useTimer } from "../../utils/hooks"
+import { useTimer } from "../../hooks/hooks"
 
 const Timer = () => {
   const { seconds, start, stop, reset } = useTimer(1000)
