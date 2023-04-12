@@ -16,7 +16,7 @@ import { Modal, Button } from "flowbite-react"
 import { useSelector } from "react-redux"
 import Spinner from "../../components/spinner/Spinner"
 import { Eye, EyeOff } from "react-feather"
-import useAuth from "../../hooks/hooks";
+import {useAuth} from "../../hooks/hooks";
 
 const Login = () => {
     const [email, setEmail] = useState("")
@@ -51,67 +51,30 @@ const Login = () => {
     const handleSubmit = async () => {
         try {
             // user sign in
-            await signIn({ email: email, password: password })
+            const authUser = await signIn({ email: email, password: password })
             setLoader(true)
-            navigate("/dashboard", { replace: true })
-            setLoader(false)
+            if (authUser.challengeName === 'SMS_MFA' || authUser.challengeName === 'SOFTWARE_TOKEN_MFA') {
+                console.debug('confirm user with ' + authUser.challengeName);
+            } else if (authUser.challengeName === 'NEW_PASSWORD_REQUIRED') {
+                console.debug('require new password', authUser.challengeParam);
+                toast('You require a new Password')
+                localStorage.setItem('unAuthenticatedUser', JSON.stringify(authUser))
+                navigate('/password-change')
+                setLoader(false)
+            } else if (authUser.challengeName === 'MFA_SETUP') {
+                console.debug('TOTP setup', authUser.challengeParam);
+            } else if (authUser.challengeName === 'CUSTOM_CHALLENGE' &&
+                authUser.challengeParam &&
+                authUser.challengeParam.trigger === 'true'
+            ) {
+                console.debug('custom challenge', authUser.challengeParam);
+            } else {
+                navigate("/dashboard", { replace: true })
+                setLoader(false)
+            }
         } catch (err) {
             console.info(err)
         }
-    // const handleSubmit = async () => {
-    //     return Auth.signIn(email, password).then( async token => {
-    //         if (token) {
-    //             const userInfo = await Auth.currentUserInfo();
-    //             const userPoolInfo = await Auth.currentUserPoolUser()
-    //             console.info('UserInfo '+ userInfo)
-    //             console.log('UserPoolInfo '+ userPoolInfo)
-    //             // localStorage.setItem('token',)
-    //         }
-    //     }).catch(e => console.error(e))
-        //console.debug(user);
-        // const user = await new CognitoUser({
-        //     Username: email,
-        //     Pool: UserPool
-        // })
-        // const authDetails = await new AuthenticationDetails({
-        //     Username: email,
-        //     Password: password
-        // })
-        // user.authenticateUser(authDetails, {
-        //     onSuccess: async (datas) => {
-        //         if (datas?.idToken) {
-        //             setLoader(true)
-        //             const { data } = await axios.post("/user/login", {
-        //                 email: email
-        //             })
-        //             dispatch(login(data.data))
-        //             localStorage.setItem("userInfo", JSON.stringify(data.data))
-        //             console.log(data.data[0].id)
-        //             const checkingPlan = await axios.post("/user/getParticularUser", {
-        //                 id: data?.data?.[0]?.id
-        //                 // || userData?.id || userID === null ? localStorage.getItem("UserId") : userID[0].id
-        //             })
-        //             setLoader(false)
-        //             if (checkingPlan.data[0].paymentPlan === "") {
-        //                 return navigate("/payment/plan")
-        //             } else {
-        //                 navigate("/dashboard")
-        //             }
-        //         } else {
-        //             toast.error("Something went wrong!")
-        //         }
-        //     },
-        //     onFailure: (err) => {
-        //         setLoader(false)
-        //         if (err.message === "User is not confirmed.") {
-        //             return toast.error("Account Verification Required")
-        //         }
-        //         if (err.message === "User is disabled.") {
-        //             return setShow(true)
-        //         }
-        //         return toast.error(err.message)
-        //     }
-        // })
     }
 
     return (

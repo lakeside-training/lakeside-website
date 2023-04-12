@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import {Auth, Hub} from "aws-amplify";
 import Spinner from "../components/spinner/Spinner"
+import {Auth, Hub} from "aws-amplify";
 // Create a context object
 export const AuthContext = React.createContext({
   user: null,
@@ -45,46 +45,28 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     fetchAuthUser()
 
-    // listening for auth change events
-    const authListener = Hub.listen(
-      "auth",
-      async ({ payload: { event, data } }) => {
-        console.log("Auth Status Changed Event: ", event)
-        console.log("Auth Status Changed Data: ", data)
-        switch (event) {
-          case 'configured':
-            console.info('the Auth module is configured');
-            break
-          case "signIn":
-            console.info('Signed In, Fetching user')
-            await fetchAuthUser()
-            break
-          case "signOut":
-            setUser(null)
-            break
-          case "signIn_failure":
-            alert("Sign in Failed")
-          case "signUp_failure":
-            if (user) {
-              setUser(null)
-            }
-            break
-          case "signUp":
-          case "forgotPassword":
-          case "forgotPasswordSubmit":
-          case "forgotPasswordSubmit_failure":
-          case "forgotPassword_failure":
-            break
-          default:
-            await fetchAuthUser()
-        }
+    Hub.listen('auth', async (data) => {
+      switch (data.payload.event) {
+        case 'signIn':
+          await fetchAuthUser()
+          break;
+        case 'signUp':
+          console.log('user signed up');
+          break;
+        case 'signOut':
+          console.log('user signed out');
+          setUser(null)
+          break;
+        case 'signIn_failure':
+          console.log('user sign in failed');
+          break;
+        case 'configured':
+          console.log('the Auth module is configured');
+          break;
+        default:
+          await fetchAuthUser()
       }
-    )
-
-    // cleanup
-    return () => {
-      authListener()
-    }
+    });
   }, [])
 
   /**
@@ -93,7 +75,8 @@ export const AuthProvider = ({ children }) => {
    * @param password
    */
   const signIn = async ({ email, password }) => {
-    await Auth.signIn({ username: email, password })
+
+    return await Auth.signIn({ username: email, password })
   }
 
   /**

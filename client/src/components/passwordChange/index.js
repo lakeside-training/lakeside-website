@@ -1,56 +1,44 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from "react";
-import { Link, useNavigate, useSearchParams } from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import { ReactComponent as Logo } from "../../assets/logo/logo.svg";
-import { CognitoUser, CognitoUserPool } from "amazon-cognito-identity-js";
 import toast from "react-hot-toast";
-import { useEffect } from "react";
+import {CognitoUser, CognitoUserPool} from "amazon-cognito-identity-js";
+import {Auth} from "aws-amplify";
 
 const PasswordChange = () => {
   const [password, setPassword] = useState("");
-  const [searchParams] = useSearchParams();
-  const EMAIL = searchParams.get("email");
-  const navigate = useNavigate();
-  const [code, setCode] = useState("");
-
-  const Pool = {
-    UserPoolId: "ap-south-1_rSmTWsYuY",
-    ClientId: "5h8576ibhd37l0vmk114ie7mdt",
-  };
-
-  const userPool = new CognitoUserPool(Pool);
-
-  const getUser = () => {
-    return new CognitoUser({
-      Username: EMAIL?.toLowerCase(),
-      Pool: userPool,
-    });
-  };
-
-  useEffect(() => {
-    getUser().forgotPassword({
-      onSuccess: (data) => {
-        console.log(data);
-      },
-      onFailure: (data) => {
-        console.log(data);
-      },
-      inputVerificationCode: (data) => {
-        console.log(data);
-      },
-    });
-  }, [EMAIL]);
+  const navigate = useNavigate()
 
   const CreatePassword = async () => {
-    getUser().confirmPassword(code, password, {
-      onSuccess: function (result) {
-        toast.success("Password changed successfully");
-        navigate("/login");
-      },
-      onFailure: function (err) {
-        toast.error(`${err}`);
-      },
-    });
+    try {
+      const user = JSON.parse(localStorage.getItem('unAuthenticatedUser'))
+      console.log('Making user pool')
+      const pool = new CognitoUserPool({
+        UserPoolId: user.pool.userPoolId,
+        ClientId: user.pool.clientId,
+        endpoint: user.client.endpoint,
+        Storage: window.localStorage,
+        AdvancedSecurityDataCollectionFlag: user.advancedSecurityDataCollectionFlag,
+      })
+      console.log('Making user')
+      const cognitoUser = new CognitoUser({
+        Username: user.username,
+        Pool: pool,
+        Storage: window.localStorage,
+      })
+      cognitoUser.Session = user.Session
+      console.log('Changing password')
+      await Auth.completeNewPassword(
+          cognitoUser,
+          password
+      )
+      toast.success("Password changed successfully");
+      navigate('/login')
+    } catch (err) {
+      toast.error(`${err}`);
+      console.log(err)
+    }
   };
 
   return (
@@ -79,40 +67,40 @@ const PasswordChange = () => {
               </div>
 
               <div className="space-y-4">
-                <div>
-                  <label className="text-base font-medium text-gray-900 font-pj">
-                    Email
-                  </label>
-                  <div className="mt-2.5">
-                    <input
-                      type="email"
-                      name=""
-                      id=""
-                      disabled
-                      value={EMAIL}
-                      placeholder="Email address"
-                      className="block w-full px-4 py-4 text-gray-900 placeholder-gray-600 bg-white border border-gray-400 rounded-xl focus:border-gray-900 focus:ring-gray-900 caret-gray-900"
-                    />
-                  </div>
-                </div>
+                {/*<div>*/}
+                {/*  <label className="text-base font-medium text-gray-900 font-pj">*/}
+                {/*    Email*/}
+                {/*  </label>*/}
+                {/*  <div className="mt-2.5">*/}
+                {/*    <input*/}
+                {/*      type="email"*/}
+                {/*      name=""*/}
+                {/*      id=""*/}
+                {/*      disabled*/}
+                {/*      value={EMAIL}*/}
+                {/*      placeholder="Email address"*/}
+                {/*      className="block w-full px-4 py-4 text-gray-900 placeholder-gray-600 bg-white border border-gray-400 rounded-xl focus:border-gray-900 focus:ring-gray-900 caret-gray-900"*/}
+                {/*    />*/}
+                {/*  </div>*/}
+                {/*</div>*/}
 
-                <div>
-                  <div className="flex items-center justify-between">
-                    <label className="text-base font-medium text-gray-900 font-pj">
-                      OTP
-                    </label>
-                  </div>
-                  <div className="mt-2.5">
-                    <input
-                      type="number"
-                      name=""
-                      id=""
-                      onChange={(e) => setCode(e.target.value)}
-                      placeholder="Enter OTP"
-                      className="block w-full px-4 py-4 text-gray-900 placeholder-gray-600 bg-white border border-gray-400 rounded-xl focus:border-gray-900 focus:ring-gray-900 caret-gray-900"
-                    />
-                  </div>
-                </div>
+                {/*<div>*/}
+                {/*  <div className="flex items-center justify-between">*/}
+                {/*    <label className="text-base font-medium text-gray-900 font-pj">*/}
+                {/*      OTP*/}
+                {/*    </label>*/}
+                {/*  </div>*/}
+                {/*  <div className="mt-2.5">*/}
+                {/*    <input*/}
+                {/*      type="number"*/}
+                {/*      name=""*/}
+                {/*      id=""*/}
+                {/*      onChange={(e) => setCode(e.target.value)}*/}
+                {/*      placeholder="Enter OTP"*/}
+                {/*      className="block w-full px-4 py-4 text-gray-900 placeholder-gray-600 bg-white border border-gray-400 rounded-xl focus:border-gray-900 focus:ring-gray-900 caret-gray-900"*/}
+                {/*    />*/}
+                {/*  </div>*/}
+                {/*</div>*/}
 
                 <div>
                   <div className="flex items-center justify-between">
