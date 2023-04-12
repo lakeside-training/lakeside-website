@@ -8,6 +8,7 @@ import Spinner from "../../components/spinner/Spinner"
 import { API } from '@aws-amplify/api'
 import config from '../../aws-exports'
 import { listCourses, listTracks } from '../../graphql/queries'
+import toast from "react-hot-toast";
 
 /// ** import axios
 //import axios from "../../axios"
@@ -16,12 +17,10 @@ import { listCourses, listTracks } from '../../graphql/queries'
 API.configure(config)
 
 const CoursesPage = () => {
-    const [category, setCategory] = useState([])
-
+    const [tracks, setTracks] = useState([])
     const [allCourseData, setAllCourseData] = useState([])
+    const [courseByTrack, setCourseByTrack] = useState({})
 
-    const [courseByCategory, setCourseByCategory] = useState({})
-    const [type, setType] = useState("Course") // Course or Lab
     // const [toggle, setToggle] = useState(true)
 
     // const handleToggle = () => {
@@ -33,20 +32,19 @@ const CoursesPage = () => {
     // }
 
     useEffect(() => {
-        const getAllCategory = async () => {
+        const getAllTracks = async () => {
             try {
-                // const { data } = await axios.get("/courseTrack/all")
-                const data = await API.graphql({
+                const {data} = await API.graphql({
                     query: listTracks
                 })
-                console.log(data)
-                //setCategory(data.data)
+                setTracks(data.listTracks.items)
             } catch (error) {
                 console.log(error)
+                //TODO: ADD ANALYTICS HERE
             }
         }
-        getAllCategory()
-        localStorage.setItem("courseStatus", false)
+        getAllTracks()
+        //localStorage.setItem("courseStatus", false)
     }, [])
 
     // useEffect(() => {
@@ -68,31 +66,26 @@ const CoursesPage = () => {
         const getAllCourse = async () => {
             try {
                 //const { data } = await axios.get(`/course/all/${type || ""}`)
-                const data = await API.graphql({
+                const {data} = await API.graphql({
                     query: listCourses
                 })
                 console.log("data: ", data)
-                //const filter = data.data.filter((i) => i.course_enable === "true")
-                // setAllCourseData(() => {
-                //     return filter
-                // })
+                const filter = data.listCourses.items.filter((i) => i.isEnabled === true)
+                console.log("Filtered :", filter)
+                setAllCourseData(() => {
+                    return filter
+                })
             } catch (error) {
                 console.log(error)
             }
         }
         getAllCourse()
-    }, [type])
+    }, [])
 
     useEffect(() => {
-        const courseByCategory = category.reduce((acc, category) => {
-            console.log("dhum-dhum", allCourseData, category)
-            const courseData = allCourseData.filter((course) => course.course_track === category.track_name)
-            acc[category.track_name] = courseData
-            return acc
-        }, {})
-
-        setCourseByCategory(courseByCategory)
-    }, [category, allCourseData])
+        const courseByTrack = allCourseData.group(({trackID}) => trackID )
+        setCourseByTrack(courseByTrack)
+    }, [tracks, allCourseData])
 
     return (
         // max-w-[90%]
@@ -138,10 +131,10 @@ const CoursesPage = () => {
           </span>
         </div> */}
 
-                {Object.keys(courseByCategory).map((category) => {
+                {Object.keys(courseByTrack).map((category) => {
                     return (
                         <>
-                            {courseByCategory[category].length > 0 && (
+                            {courseByTrack[category].length > 0 && (
                                 <div className=" flex max-ms:pl-5 justify-center sm:justify-start flex-col mb-8 w-full ">
                                     <div className="text-center max-w-[278px] sm:max-w-[100%] min-w-[278px] mx-auto  sm:mx-[0] flex items-center gap-5 mb-10">
                                         <div className="grow-0  w-fit">
@@ -152,7 +145,7 @@ const CoursesPage = () => {
                                         <div className="w-full flex-grow  h-[.8px] bg-black"></div>
                                     </div>
                                     <CourseCard
-                                        data={courseByCategory[category]}
+                                        data={courseByTrack[category]}
                                         hide="hide"
                                     />
                                 </div>
