@@ -7,7 +7,7 @@ import PrivateRoute from "../../security/PrivateRoute"
 
 // ** import Route Pages
 import notAuthPageRoutes from "./notAuthPage"
-import dashboradRoutes from "./dashboard"
+import dashboardRoutes from "./dashboard"
 
 // ** Layouts
 import BlankLayout from "../../layouts/BlankLayout"
@@ -24,7 +24,7 @@ const getLayout = {
 // [x]: Add Public Routes
 // [ ]
 // ** Merge Routes
-const Routes = [...notAuthPageRoutes, ...dashboradRoutes]
+const Routes = [...notAuthPageRoutes, ...dashboardRoutes]
 
 const getRouteMeta = (route) => {
   if (isObjEmpty(route.element.props)) {

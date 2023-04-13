@@ -25,7 +25,7 @@ const Router = () => {
 
   const routes = useRoutes([...allRoutes])
 
-  return <AnimatePresence exitBeforeEnter>{routes}</AnimatePresence>
+  return <AnimatePresence mode='wait'>{routes}</AnimatePresence>
 }
 
 export default Router

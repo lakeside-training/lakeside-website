@@ -11,16 +11,19 @@ import { store } from "./redux/store"
 import { Toaster } from "react-hot-toast"
 import { Amplify } from 'aws-amplify';
 import awsExports from './aws-exports';
+import AuthProvider from "./contexts/AuthContext";
 Amplify.configure(awsExports);
 
 const App = lazy(() => import("./App"))
 const root = ReactDOM.createRoot(document.getElementById("root"))
 
 root.render(
-    <App />
-  // <Provider store={store}>
-  //   {/* <ApiLoader /> */}
-  //   <Toaster position="top-right" reverseOrder={false} />
-  //
-  // </Provider>
+
+  <Provider store={store}>
+    {/* <ApiLoader /> */}
+    <Toaster position="top-right" reverseOrder={false} />
+      <AuthProvider>
+          <App />
+      </AuthProvider>
+  </Provider>
 )

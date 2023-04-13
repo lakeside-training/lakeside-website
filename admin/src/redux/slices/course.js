@@ -1,6 +1,5 @@
 /* eslint-disable eqeqeq */
 import { createSlice, current } from "@reduxjs/toolkit";
-import { clear } from "@testing-library/user-event/dist/clear";
 
 const initialState = {
   modules: [],

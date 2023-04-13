@@ -1,19 +1,15 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect, useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
-import { useDispatch } from "react-redux"
 import toast from "react-hot-toast"
 // ** import custom icons
 import { ReactComponent as Logo } from "../../assets/logo/logo.svg"
 import { ReactComponent as Facebook } from "../../assets/icons/facebook.svg"
 import Google from "../../assets/icons/google.png"
-import { login } from "../../redux/slices/auth"
-import axios from "../../axios"
 import { trackPromise } from "react-promise-tracker"
 import { Modal, Button } from "flowbite-react"
 
 /** import redux */
-import { useSelector } from "react-redux"
 import Spinner from "../../components/spinner/Spinner"
 import { Eye, EyeOff } from "react-feather"
 import {useAuth} from "../../hooks/hooks";

@@ -11,9 +11,9 @@ import UserPayment from "../../pages/UserPayment/UserPayment"
 import UsersManagement from "../../pages/UsersManagement/UsersManagement"
 import AddLab from '../../pages/AddLab'
 
-const dashboradRoutes = [
+const dashboardRoutes = [
   {
-    path: "/",
+    path: "/dashboard",
     element: <Dashboard />,
     meta: {
       // isNotSidebar: true,
@@ -71,4 +71,4 @@ const dashboradRoutes = [
   }
 ]
 
-export default dashboradRoutes
+export default dashboardRoutes

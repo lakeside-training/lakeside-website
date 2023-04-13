@@ -14,14 +14,6 @@ const notAuthPages = [
       publicRoute: true
     }
   },
-  // {
-  //   path: "/signup",
-  //   element: <Signup />,
-  //   meta: {
-  //     layout: "blank",
-  //     publicRoute: true
-  //   }
-  // },
   {
     path: "/forget",
     element: <ForgotPassword />,
@@ -31,7 +23,7 @@ const notAuthPages = [
     }
   },
   {
-    path: "/reset-password/:token",
+    path: "/reset-password",
     element: <ResetPassword />,
     meta: {
       layout: "blank",
@@ -40,7 +32,7 @@ const notAuthPages = [
   },
 
   {
-    path: "/verify-otp/:token",
+    path: "/verify-otp",
     element: <VerifyOTP />,
     meta: {
       layout: "blank",
